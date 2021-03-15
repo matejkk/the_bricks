@@ -5,16 +5,19 @@
     <title>The Bricks</title>
     <script src="bricks.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 </head>
 
 <body onload="drawIt()">
-    <div id="zunanji">
-        <p id="points">TOČKE: </p>
-        <p id="life">ŽIVLJENJA: </p>
-        <p id="cas">ČAS: 00:00</p>
-    </div>
     <div id="canvas2">
-        <div id="konec"></div>
+        <div id="notranji">
+            <p id="points">POINTS: </p>
+            <p id="life">LIFES: </p>
+            <p id="cas">TIME: 00:00</p>
+        </div>
+        <div id="konec">
+        </div>
         <button id="refresh" onclick="(new drawIt()).reset()">RESET</button>
         <canvas id="canvas" width="900" height="900" style="border:2px solid black"></canvas>
     </div>

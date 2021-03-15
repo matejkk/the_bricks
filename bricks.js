@@ -9,6 +9,7 @@ function drawIt() {
     var restart = document.getElementById('refresh');
     var cas = document.getElementById('cas');
     var storage = document.getElementById('storage');
+    var notranji = document.getElementById('notranji');
     var tocke = 0;
     var start = true;
     //ploscek
@@ -58,6 +59,7 @@ function drawIt() {
         life = 3;
         konec.style.display = 'none';
         restart.style.display = 'none';
+        notranji.style.display = 'block';
         for (i = 0; i < vrsta; i++) {
             bricks[i] = new Array(stolpec);
             for (j = 0; j < stolpec; j++) {
@@ -93,7 +95,7 @@ function drawIt() {
             minuteI = ((minuteI = Math.floor(sekunde / 60)) > 9) ? minuteI : "0" + minuteI;
             izpisTimer = minuteI + ":" + sekundeI;
         }
-        cas.innerHTML = "ČAS: " + izpisTimer;
+        cas.innerHTML = "TIME: " + izpisTimer;
     }
 
     localStorage.setItem("time", izpisTimer);
@@ -106,6 +108,7 @@ function drawIt() {
             clearInterval(refreshInterval);
             konec.style.display = 'block';
             restart.style.display = 'block';
+            notranji.style.display = 'none';
             //local storage
             if (localStorage.getItem("tocke") < tocke) {
                 localStorage.setItem("tocke", tocke);
@@ -149,7 +152,7 @@ function drawIt() {
                 life--;
                 dy = dy * (-1);
             }
-            lives.innerHTML = "ŽIVLJENJA: " + life;
+            lives.innerHTML = "LIFE: " + life;
             //tipkovnica
             document.addEventListener('keydown', function (event) {
                 if (event.keyCode == 37) {
@@ -178,7 +181,7 @@ function drawIt() {
                 dy = dy * -1;
             }
             //odboj-opeke
-            points.innerHTML = "TOČKE: " + tocke;
+            points.innerHTML = "POINTS: " + tocke;
             i = Math.floor(y / rowheight);
             j = Math.floor(x / colwidth);
             if (y <= vrsta * rowheight && i >= 0 && j >= 0 && bricks[i][j] > 0) {
