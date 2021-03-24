@@ -49,7 +49,7 @@ p{
     display: flex;
     align-items: center;
     justify-items: center;
-    background-image: url("img/konec.png");
+    background-image: url("https://github.com/matejkk/the_bricks/blob/main/img/konec.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: none;
