@@ -1,0 +1,27 @@
+<html lang="sl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Bricks</title>
+    <script src="js/bricks.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sweetalert2.css" />
+</head>
+
+<body onload="drawIt()">
+    <div id="zunanji">
+        <div id="notranji">
+            <p id="points">POINTS: </p>
+            <p id="life">LIFES: </p>
+        </div>
+        <div id="konec"></div>
+        <button id="refresh" onclick="(new drawIt()).reset()">PLAY AGAIN</button>
+        <canvas id="canvas" width="900" height="900" style="border:2px solid black"></canvas>
+    </div>
+    <script src="js/sweetalert2.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+</body>
+
+</html>
