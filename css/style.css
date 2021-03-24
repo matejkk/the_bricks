@@ -49,7 +49,7 @@ p{
     display: flex;
     align-items: center;
     justify-items: center;
-    background-image: url("slike/konec.png");
+    background-image: url("/img/konec.png");
     background-size: cover;
     background-repeat: no-repeat;
     display: none;
