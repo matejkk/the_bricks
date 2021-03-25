@@ -196,7 +196,7 @@ function drawIt() {
                 dy = dy * (-1);
             }
 
-            lives.innerHTML = "LIFE: " + life;
+            lives.innerHTML = "LIFES: " + life;
             points.innerHTML = "POINTS: " + tocke;
             //tipkovnica
             document.addEventListener('keydown', function (event) {
